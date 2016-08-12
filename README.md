@@ -1,6 +1,8 @@
 # astro
 
-**astro** is a command line application designed to automate the deployment process of Think Research applications. It will parse a config file (.astro.toml), which will identify:
+[ ![Codeship Status for dnathanturner/astro](https://codeship.com/projects/f640d060-4300-0134-8a1c-1e76a446a475/status?branch=master)](https://codeship.com/projects/168312)
+
+**astro** is a command line application designed to automate the deployment process of applications. It will parse a config file (.astro.toml), which will identify:
 
   - the application
   - the source repo
@@ -11,8 +13,6 @@
   - the build steps
   - the deployment environment
   - any post build steps
-
-Configurations can be overwritten using [flaegs](https://github.com/containous/flaeg).
 
 ### Configuration structure
 
