@@ -4,7 +4,7 @@
 
   - the application
   - the source repo
-  - the source branch
+  - the version
   - if astro should pull the master branch and push a newly created branch upstream
     - if set to false, astro will pull the branch that it is currently on
   - optional extra dependencies
