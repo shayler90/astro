@@ -17,4 +17,5 @@ Configurations can be overwritten using [flaegs](https://github.com/containous/f
 ### Configuration structure
 
 Examples:
+
   - [basic](examples/basic_example.toml)
