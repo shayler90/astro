@@ -1,0 +1,16 @@
+title "Deploy astro version 0.0.1 to alpha"
+
+environment = "alpha" 
+
+[application]
+name = "astro"
+source = "https://bitbucket.org/dnathanturner/astro"
+pull_master = true 
+version = "0.0.1"
+
+[build]
+deps = ""
+steps = [
+  "npm install"
+] 
+post = "" 
