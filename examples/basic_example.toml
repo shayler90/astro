@@ -1,16 +1,14 @@
 title "Deploy astro version 0.0.1 to alpha"
 
-environment = "alpha" 
+[environment]
+name = "alpha"
 
 [application]
-name = "astro"
-source = "https://bitbucket.org/dnathanturner/astro"
-pull_master = true 
-version = "0.0.1"
+name        = "astro"
+source      = "https://bitbucket.org/dnathanturner/astro"
+pull_master = true
+version     = "0.0.1"
 
 [build]
-deps = ""
-steps = [
-  "npm install"
-] 
-post = "" 
+go = 	[["get", "github.com/containeous/flaeg"],
+	["install", "bitbucket.org/dnathanturner/astro"]]

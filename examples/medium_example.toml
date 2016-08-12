@@ -1,0 +1,24 @@
+title "Deploy astro-med-complex version 1.27.0 to alpha"
+
+[environment]
+name = "alpha"
+
+[application]
+name        = "astro-med-complex"
+source      = "git@bitbucket.org/dnathanturner/astro-med-complex.git"
+pull_master = true
+version     = "1.27.0"
+
+[gem]
+edit = [["some-gem-dep", "release-1.30.0", "git@bitbucket.org:dnathanturner/some-gem-dep.git"]]
+
+[pre]
+remove 	= 	[["vendor/node_modules"]]
+edit 	= 	[["app/views/astro-med-complex/launch/index.html.erb", "<!-- version: 1.27.0 -->"],
+		["config/application.rb", "config.version = '1.27.0'"], 
+		["public/web/index.html", "<!-- version: 1.27.0 -->"]]
+
+[build]
+bundle = ["install", "update --source some-gem-dep"]
+npm    = ["install"]
+gulp   = ["build"]
