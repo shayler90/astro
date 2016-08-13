@@ -1,4 +1,4 @@
-package main
+package astro
 
 import (
 	"fmt"
@@ -13,5 +13,6 @@ func main() {
 	}
 
 	app := config.Get("application.name")
-	fmt.Printf("Application => %v\n", app)
+	version := config.Get("application.version")
+	fmt.Println("Application => ", app, version)
 }
