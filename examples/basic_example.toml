@@ -10,5 +10,6 @@ pull_master = true
 version     = "0.0.1"
 
 [build]
-go = 	[["get", "github.com/containeous/flaeg"],
-	["install", "bitbucket.org/dnathanturner/astro"]]
+[build.go]
+get = "github.com/fatih/color"
+install = "github.com/dnt17/astro"
