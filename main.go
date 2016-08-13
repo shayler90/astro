@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/pelletier/go-toml"
+	"log"
+)
 
 func main() {
-	fmt.Println("Hello go")
+	config, err := toml.LoadFile("examples/basic_example.toml")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	app := config.Get("application.name")
+	fmt.Printf("Application => %v\n", app)
 }

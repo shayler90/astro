@@ -1,4 +1,4 @@
-title "Deploy astro-med-complex version 1.27.0 to alpha"
+title = "Deploy astro-med-complex version 1.27.0 to alpha"
 
 [environment]
 name = "alpha"
