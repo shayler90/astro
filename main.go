@@ -1,4 +1,4 @@
-package astro
+package main
 
 import (
 	"fmt"
@@ -11,8 +11,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	app := config.Get("application.name")
 	version := config.Get("application.version")
-	fmt.Println("Application => ", app, version)
+	get := config.Get("build.go.get")
+	//build_go_get := config.Get("build.go")
+	fmt.Printf("Application => %v %v\n", app, version)
+	fmt.Println("Build => ", get)
 }
