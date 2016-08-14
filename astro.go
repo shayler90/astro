@@ -1,20 +1,16 @@
-package main
+package astro
 
 import (
-	"fmt"
 	"github.com/pelletier/go-toml"
 	"log"
 )
 
-func main() {
+func getApp() string {
 	config, err := toml.LoadFile("examples/basic_example.toml")
 	if err != nil {
 		log.Fatal(err)
 	}
-	app := config.Get("application.name")
-	version := config.Get("application.version")
-	get := config.Get("build.go.get")
-	//build_go_get := config.Get("build.go")
-	fmt.Printf("Application => %v %v\n", app, version)
-	fmt.Println("Build => ", get)
+	var app_name string
+	app_name = config.Get("application.name").(string)
+	return app_name
 }
