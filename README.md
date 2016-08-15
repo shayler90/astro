@@ -1,7 +1,6 @@
 # astro
 
-[ ![Codeship Status for dnt17/astro](https://codeship.com/projects/4af7d1a0-4303-0134-bd17-76dd7bf7b13e/status?branch=dev)] [![Coverage Status](https://coveralls.io/repos/github/dnt17/astro/badge.svg?branch=master)](https://coveralls.io/github/dnt17/astro?branch=dev)
-
+[ ![Codeship Status for dnt17/astro](https://codeship.com/projects/4af7d1a0-4303-0134-bd17-76dd7bf7b13e/status?branch=dev)](https://codeship.com/projects/168314)
 **astro** is a command line application designed to automate the deployment process of applications. It will parse a config file (.astro.toml), which will identify:
 
   - the application
