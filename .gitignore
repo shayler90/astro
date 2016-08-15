@@ -1,2 +1,3 @@
 *.swp
 astro
+node_modules/*
