@@ -21,3 +21,12 @@ func getName(tomlfile string) string {
 	app_name = tree.Get("application.name").(string)
 	return app_name
 }
+
+func getSource(tomlfile string) string {
+	tree, err := toml.LoadFile(tomlfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var app_source = tree.Get("application.source").(string)
+	return app_source
+}

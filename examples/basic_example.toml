@@ -5,7 +5,7 @@ name = "alpha"
 
 [application]
 name        = "astro"
-source      = "https://bitbucket.org/dnathanturner/astro"
+source      = "https://github.com/dnt17/astro"
 pull_master = true
 version     = "0.0.1"
 

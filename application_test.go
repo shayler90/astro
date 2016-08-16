@@ -8,3 +8,10 @@ func TestGetName(t *testing.T) {
 		t.Error("Expected: astro, Got: ", app_name)
 	}
 }
+
+func TestGetSource(t *testing.T) {
+	app_source := getSource("examples/basic_example.toml")
+	if app_source != "https://github.com/dnt17/astro" {
+		t.Error("Expected: https://github.com/dnt17/astro, Got: ", app_source)
+	}
+}

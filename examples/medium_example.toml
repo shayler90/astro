@@ -4,8 +4,8 @@ title = "Deploy astro-med-complex version 1.27.0 to alpha"
 name = "alpha"
 
 [application]
-name        = "astro-med-complex"
-source      = "git@bitbucket.org/dnathanturner/astro-med-complex.git"
+name        = "astro"
+source      = "https://github.com/dnt17/astro"
 pull_master = true
 version     = "1.27.0"
 
