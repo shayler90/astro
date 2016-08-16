@@ -1,11 +1,18 @@
-package astro
+package application
 
 import (
 	"github.com/pelletier/go-toml"
 	"log"
 )
 
-func getApp(tomlfile string) string {
+type Application struct {
+	name        string
+	source      string
+	pull_master bool
+	version     string
+}
+
+func getName(tomlfile string) string {
 	tree, err := toml.LoadFile(tomlfile)
 	if err != nil {
 		log.Fatal(err)
