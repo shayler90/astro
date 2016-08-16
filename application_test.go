@@ -29,3 +29,12 @@ func TestGetVersion(t *testing.T) {
 		t.Error("Expected: 0.0.1, Got: ", app_version)
 	}
 }
+
+func BenchmarkGetApplication1000(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		getName("examples/basic_example.toml")
+		getSource("examples/basic_example.toml")
+		getPullMaster("examples/basic_example.toml")
+		getVersion("examples/basic_example.toml")
+	}
+}
