@@ -30,3 +30,21 @@ func getSource(tomlfile string) string {
 	var app_source = tree.Get("application.source").(string)
 	return app_source
 }
+
+func getPullMaster(tomlfile string) bool {
+	tree, err := toml.LoadFile(tomlfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var app_pull_master = tree.Get("application.pull_master").(bool)
+	return app_pull_master
+}
+
+func getVersion(tomlfile string) string {
+	tree, err := toml.LoadFile(tomlfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var app_version = tree.Get("application.version").(string)
+	return app_version
+}
